@@ -1,0 +1,1 @@
+(Tàu hỏa, TRAIN-N) (nào, WH-DET) (đến, ARRIVE-V) (thành phố, CITY-N) (Huế, CITY-NAME) (lúc, AT-TIME) (19:00HR, TIME-MOD) (?, QT)

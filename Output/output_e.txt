@@ -1,0 +1,1 @@
+(PRINT-ALL ?t (TRAIN ?t) (ATIME ?t HUE 19:00HR) (DTIME ?t ?dc ?dt) (RUN-TIME ?t ?dc HUE ?rt))

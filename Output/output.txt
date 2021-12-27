@@ -1,0 +1,138 @@
+Text 1:
+det-wh(Tàu hỏa, nào)
+nsubj(đến, Tàu hỏa)
+ROOT(ROOT, đến)
+nmod(Huế, thành phố)
+dobj-a(đến, Huế)
+case-t(19:00HR, lúc)
+obl(đến, 19:00HR)
+punct(đến, ?)
+
+(Wh-Train t1)
+(v1 PRED đến)
+(v1 LSUBJ t1)
+(v1 TO-LOC (CITY-NAME c2 "Huế"))
+(v1 ARRIVE-AT (TIMEMOD a1 "19:00HR"))
+
+(Wh-Train t1: ("ĐẾN" v1) (AGENT v1 t1) (TO-LOC v1 (CITY-NAME c2 "HUẾ")) (ARRIVE-AT v1 (TIMEMOD a1 "19:00HR")))
+
+(PRINT-ALL ?t (TRAIN ?t) (ATIME ?t HUẾ 19:00HR) (DTIME ?t ?dc ?dt) (RUN-TIME ?t ?dc HUẾ ?rt))
+(PRINT-ALL ?t (TRAIN ?t) (DTIME ?t ?dc ?dt) (ATIME ?t HUE 19:00HR) (RUN-TIME ?t ?dc HUE ?rt))
+B1
+
+
+Text 2:
+nmod(tàu hỏa, Thời gian)
+namemod(tàu hỏa, B3)
+nsubj(chạy, tàu hỏa)
+ROOT(ROOT, chạy)
+case-d(Đà Nẵng, từ)
+obl(chạy, Đà Nẵng)
+nmod(Hồ Chí Minh, TP)
+case-a(Hồ Chí Minh, đến)
+obl(chạy, Hồ Chí Minh)
+is(mấy giờ, là)
+obl(chạy, mấy giờ)
+punct(chạy, ?)
+
+(Wh-Runtime r1)
+(v1 PRED chạy)
+(v1 LSUBJ (TRAIN-NAME t1 "B3"))
+(v1 FROM-LOC (CITY-NAME c1 "Đà Nẵng"))
+(v1 TO-LOC (CITY-NAME c2 "Hồ Chí Minh"))
+(v1 RUN-IN r1)
+
+(Wh-Runtime r1: ("CHẠY" v1) (AGENT v1 (TRAIN-NAME t1 "B3")) (FROM-LOC v1 (CITY-NAME c1 "ĐÀ NẴNG")) (TO-LOC v1 (CITY-NAME c2 "HỒ CHÍ MINH")) (RUN-IN v1 r1))
+
+(PRINT-ALL ?rt (TRAIN B3) (ATIME B3 HỒ CHÍ MINH ?at) (DTIME B3 ĐÀ NẴNG ?dt) (RUN-TIME B3 ĐÀ NẴNG HỒ CHÍ MINH ?rt))
+(PRINT-ALL ?rt (TRAIN B3) (DTIME B3 DANANG ?dt) (ATIME B3 HCMC ?at) (RUN-TIME B3 DANANG HCMC ?rt))
+10:00HR
+
+
+Text 3:
+det-wh(Tàu hỏa, nào)
+nsubj(đến, Tàu hỏa)
+ROOT(ROOT, đến)
+nmod(Hồ Chí Minh, thành phố)
+dobj-a(đến, Hồ Chí Minh)
+punct(đến, ?)
+
+(Wh-Train t1)
+(v1 PRED đến)
+(v1 LSUBJ t1)
+(v1 TO-LOC (CITY-NAME c2 "Hồ Chí Minh"))
+
+(Wh-Train t1: ("ĐẾN" v1) (AGENT v1 t1) (TO-LOC v1 (CITY-NAME c2 "HỒ CHÍ MINH")))
+
+(PRINT-ALL ?t (TRAIN ?t) (DTIME ?t ?dc ?dt) (ATIME ?t HCMC ?at) (RUN-TIME ?t ?dc HCMC ?rt))
+(PRINT-ALL ?t (TRAIN ?t) (DTIME ?t ?dc ?dt) (ATIME ?t HCMC ?at) (RUN-TIME ?t ?dc HCMC ?rt))
+B3
+
+
+
+Text 4:
+det-wh(Tàu hỏa, nào)
+nsubj(chạy, Tàu hỏa)
+ROOT(ROOT, chạy)
+case-d(Nha Trang, từ)
+obl(chạy, Nha Trang)
+case-t-wh(mấy giờ, lúc)
+obl(chạy, mấy giờ)
+punct(chạy, ?)
+
+(Wh-Train t1)
+(Wh-DTime d1)
+(v1 PRED CHẠY)
+(v1 LSUBJ t1)
+(v1 FROM-LOC (CITY-NAME c1 "NHA TRANG"))
+(v1 DEPART-AT d1)
+
+(Wh-Train t1 Wh-DTime d1: ("CHẠY" v1) (AGENT v1 t1) (FROM-LOC v1 (CITY-NAME c1 "NHA TRANG")) (DEPART-AT v1 d1))
+
+(PRINT-ALL ?t (TRAIN ?t) (ATIME ?t ?ac ?at) (DTIME ?t NHA TRANG ?dt) (RUN-TIME ?t NHA TRANG ?ac ?rt))
+(PRINT-ALL ?dt (TRAIN ?t) (ATIME ?t ?ac ?at) (DTIME ?t NHA TRANG ?dt) (RUN-TIME ?t NHA TRANG ?ac ?rt))
+
+
+Text 5:
+det-wh(Tàu hỏa, nào)
+nsubj(chạy, Tàu hỏa)
+ROOT(ROOT, chạy)
+nmod(Hồ Chí Minh, TP)
+case-d(Hồ Chí Minh, từ)
+obl(chạy, Hồ Chí Minh)
+case-a(Hà Nội, đến)
+obl(chạy, Hà Nội)
+punct(chạy, ?)
+
+(Wh-Train t1)
+(v1 PRED chạy)
+(v1 LSUBJ t1)
+(v1 FROM-LOC (CITY-NAME c1 "Hồ Chí Minh"))
+(v1 TO-LOC (CITY-NAME c2 "Hà Nội"))
+
+(Wh-Train t1: ("CHẠY" v1) (AGENT v1 t1) (FROM-LOC v1 (CITY-NAME c1 "HỒ CHÍ MINH")) (TO-LOC v1 (CITY-NAME c2 "HÀ NỘI")))
+
+(PRINT-ALL ?t (TRAIN ?t) (ATIME ?t HN ?at) (DTIME ?t HCMC ?dt) (RUN-TIME ?t HCMC HN ?rt))
+B5
+
+
+
+Text 6:
+namemod(Tàu hỏa, B5)
+advmod(chạy, có)
+nsubj(chạy, Tàu hỏa)
+ROOT(ROOT, chạy)
+case-d(Đà Nẵng, từ)
+obl(chạy, Đà Nẵng)
+advmod(chạy, không)
+punct(chạy, ?)
+
+(YN)
+(v1 PRED CHẠY)
+(v1 LSUBJ (TRAIN-NAME t1 "B5"))
+(v1 FROM-LOC (CITY-NAME c1 "ĐÀ NẴNG"))
+
+(YN: ("CHẠY" v1) (AGENT v1 (TRAIN-NAME t1 "B5")) (FROM-LOC v1 (CITY-NAME c1 "ĐÀ NẴNG")))
+
+(CHECK-ALL-TRUE (TRAIN B5) (ATIME B5 ?ac ?at) (DTIME B5 DANANG ?dt) (RUN-TIME B5 DANANG ?ac ?rt))
+Không
