@@ -93,5 +93,6 @@ Trong đó:\
 Nếu verbose = 1 hay 3, kết quả của các yêu cầu sẽ được in ra trong các file Output/output_X.txt với X tương ứng với các yêu cầu từ a đến f.\
 
 ## Link github:
+https://github.com/phqlong/NLP_Simple_QA_System
 
 ## Link Demo Google Colab
