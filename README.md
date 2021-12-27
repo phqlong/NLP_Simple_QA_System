@@ -98,4 +98,4 @@ Nếu verbose = 1 hay 3, kết quả của các yêu cầu sẽ được in ra t
 https://github.com/phqlong/NLP_Simple_QA_System
 
 ## Link Demo Google Colab
-https://colab.research.google.com/drive/1w4iVyhPOueOPe4gQYmeCrLu-TWoahrMO?usp=sharing
+https://colab.research.google.com/drive/1ALKAz2PsJWHLDgjsxEbLda9f3-HQyBnk?usp=sharing
