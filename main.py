@@ -70,18 +70,18 @@ if __name__ == '__main__':
     ##################################################################################
     # a) Xây dựng bộ phân tích cú pháp của văn phạm phụ thuộc.
     # Tokenization
-    print("\n========================== Tokenization ==========================")
+    print("\n>>> Tokenization >>>")
     tk = Tokenizer(args.grammar)
     token = tk.tokenize(inputText)
     tokenStr = ' '.join(str(t) for t in token)
     print(tokenStr)
 
     if args.verbose == 1:
-        print("\n========================== Parse tree ==========================")
+        print("\n>>> Parse tree >>>")
         tk.tree.pretty_print(unicodelines=True, nodedist=3)
         write_output(args.outputDir + '/output_a.txt', tokenStr)
     elif args.verbose == 2:
-        print("\n========================== Parse tree ==========================")
+        print("\n>>> Parse tree >>>")
         tk.tree.pretty_print(unicodelines=True, nodedist=3)
     elif args.verbose == 3:
         write_output(args.outputDir + '/output_a.txt', tokenStr)
@@ -89,7 +89,7 @@ if __name__ == '__main__':
     ##################################################################################
     # b) Phân tích cú pháp và xuất ra các quan hệ ngữ nghĩa của các câu truy vấn.
     # Dependency Parsing
-    print("\n========================== Dependency Parsing ==========================")
+    print("\n>>> Dependency Parsing >>>")
     parser = DependencyParser(token)
     parser.parse()
     depParseStr = '\n'.join(str(t) for t in parser.relation)
@@ -101,7 +101,7 @@ if __name__ == '__main__':
     ##################################################################################
     # c) Từ kết quả ở b) tạo các quan hệ văn phạm với cơ sở dữ liệu đã cho ở trên.
     # Grammatical Relations
-    print("\n========================== Grammatical Relations ==========================")
+    print("\n>>> Grammatical Relations >>>")
     gr = GrammaticalRelations(parser.relation)
     gramRel = gr.getGramRel()
     gramRelStr = '\n'.join(str(t) for t in gramRel)
@@ -113,7 +113,7 @@ if __name__ == '__main__':
     ##################################################################################
     # d) Tạo dạng luận lý từ các quan hệ văn phạm ở c)
     # Logical Forms
-    print("\n========================== Logical Forms ==========================")
+    print("\n>>> Logical Forms >>>")
     logicalFormStr = gr.getLogicalForms()
     print(logicalFormStr)
 
@@ -123,7 +123,7 @@ if __name__ == '__main__':
     ##################################################################################
     # e) Tạo ngữ nghĩa thủ tục từ dạng luận lý ở d).
     # Procedural Semantics
-    print("\n========================== Procedural Semantics ==========================")
+    print("\n>>> Procedural Semantics >>>")
     re = ProceduralSemantic(gr.queryPatterns, gr.var)
     procLst = re.getProcedure()
     procStr = '\n'.join(proc for proc in procLst)
@@ -135,7 +135,7 @@ if __name__ == '__main__':
     ##################################################################################
     # f) Truy xuất dữ liệu để tìm thông tin trả lời cho các câu truy vấn trên.
     # Retrieve Information
-    print("\n========================== Retrieve Information ==========================")
+    print("\n>>> Retrieve Information >>>")
     result = re.retrieveResult("Models/database.txt")
     resultStr = '\n'.join(res for res in result)
     print(resultStr)
